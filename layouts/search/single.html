@@ -1,9 +1,7 @@
 {{ define "content"}}
 <div class="res-cons">
     <h3 class="archive-title">
-        搜索
-        <span class="keyword">哈哈</span>
-        的结果
+        <span class="keyword">请在侧边栏中的搜索框发起搜索。</span> <span class="search-hint"></span>
     </h3>
 
     <article class="post">
@@ -42,7 +40,10 @@
 
     $(document).ready(function () {
         var q = getUrlParameter("q");
-        $("span.keyword").text(q);
+        if (typeof q !== "undefined" && q != "") {
+			$("span.keyword").text(q);
+			$("span.search-hint").text("的搜索结果");
+        }
         $("article.post").remove();
         $.ajax({
             url: '{{"index.xml"|absURL}}',

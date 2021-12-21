@@ -1,6 +1,6 @@
 <footer id="footer">
     <div>
-        &copy; 2016—{{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">Hans Wan 的博客</a>
+        &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">Hans Wan</a>
         {{ if .Site.Params.beian }}
         | <a rel="nofollow" target="_blank" href="http://beian.miit.gov.cn/">{{.Site.Params.beian}}</a>
         {{ end }}
@@ -13,6 +13,13 @@
         <div class="github-badge">
             <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-brightgreen">Maupassant</span></a>
         </div>
+        <div class="github-badge">
+            <a href="https://docs.github.com/cn/actions" target="_black"><span class="badge-subject">CI</span><span class="badge-value bg-red">GitHub Actions</span></a>
+        </div>
+    </div>
+    <br />
+    <div>
+		<span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>
     </div>
 </footer>
 
